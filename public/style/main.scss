@@ -1,0 +1,135 @@
+@import "palette";
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+::selection {
+    background: $bright-yellow-crayola;
+    color: white;
+}
+
+body {
+    background-color: $eerie-black;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-family: 'Righteous', cursive;
+    color: $bright-yellow-crayola;
+    
+
+    font-weight: lighter;
+    font-size: 3rem;
+
+    margin: 1rem 0;
+}
+
+.desc {
+    color: $cultured;
+    font-size: 1.4rem;
+    font-weight: lighter;
+}
+
+.login {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: $form;
+    width: 19rem;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.7);
+
+    color: $cultured;
+
+    p {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: .9rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin: 1rem 0;
+            font-size: .9rem;
+        }
+
+        .input {
+            border: none;
+            padding: .5rem;
+            border-radius: 5rem;
+
+            background: $input;
+            box-shadow: inset 0 0 3px rgba(0,0,0,.5);
+            color: $cultured;
+        }
+
+        .submit {
+            margin-top: 2rem;
+            padding: .5rem;
+            border: .2rem solid $card-button;
+            border-radius: 5rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+
+            transition: 250ms ;
+
+            color: $cultured;
+
+            &:hover {
+                cursor: pointer;   
+                border-color: $bright-yellow-crayola;
+            }
+        }
+    }
+
+}
+
+// footer {
+//     height: 40px;
+//     background-color: $footer;
+//     color: $cultured;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     position: relative;
+//     width: 100vw;
+
+//     p {
+//         margin: 0 2rem;
+//         font-size: .7rem;
+//     }
+// }
+
+@media (min-width: 700px) {
+
+    main {
+        justify-content: center;
+    }
+
+    .login {
+        width: 500px;
+    }
+
+    .logo {
+        transform: scale(1.4);
+        margin-top: -50px;
+    }
+}
